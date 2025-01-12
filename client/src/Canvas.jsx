@@ -63,33 +63,6 @@ const Canvas = () => {
     }
   }, []);
 
-  React.useEffect(() => {
-    scaleCanvas();
-    window.addEventListener("resize", scaleCanvas);
-  }, []);
-
-  const scaleCanvas = () => {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-
-    const scaleFactor = Math.min(screenWidth, screenHeight) / 500;
-
-    const newWidth = Math.min(500, screenWidth);
-    const newHeight = Math.min(500, screenHeight);
-
-    canvasInstance.current.setWidth(newWidth);
-    canvasInstance.current.setHeight(newHeight);
-
-    canvasInstance.current.setViewportTransform([
-      scaleFactor,
-      0,
-      0,
-      scaleFactor,
-      0,
-      0,
-    ]);
-  };
-
   const addingShapeCircle = () => {
     if (canvasInstance.current) {
       const circle = new fabric.Circle({
