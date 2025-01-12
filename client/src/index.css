@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box-;
+  font-family: "Fira Sans", serif;
+}
+
+html,
+body {
+  line-height: 1.1;
+  background: #d9dfc6;
+  overflow-x: hidden;
+  background: url("./assets/graph.jpg");
+}
